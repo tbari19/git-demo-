@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()             //only 1,2 & 145 are strong nos between 1-1000
+{
+    int no,r,fact,c,temp,add;
+    system("cls");
+    no=1;
+    while(no<=1000)
+    {
+       printf("\n");
+       r=0;
+       temp=no;
+       fact=1;
+       add=0;
+       c=0;
+       while(no!=0)
+       {
+           r=no%10;
+           c=1;
+           fact=1;
+           while(c<=r)
+           {
+             fact=fact*c;
+             c=c+1;
+           }  
+           add=add+fact;
+           no=no/10;    
+       }
+       if(temp==add)
+        {
+               printf("%d",add);
+        }
+       no=temp;
+       no=no+1;
+    }
+
+getch();
+}
